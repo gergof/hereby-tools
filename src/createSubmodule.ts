@@ -3,15 +3,15 @@ import { Task } from 'hereby';
 import taskP from './taskP.js';
 import { SubmoduleTaskOptions } from './types.js';
 
-const createSubmodule = (
+const createSubmodule = <TaskName extends string>(
 	prefix: string,
-	definitions: Record<string, SubmoduleTaskOptions>
+	definitions: Record<TaskName, SubmoduleTaskOptions<NoInfer<TaskName>>>
 ) => {
-	const tasks: Record<string, Task> = Object.create(null);
+	const tasks: Record<TaskName, Task> = Object.create(null);
 
 	const resolving = new Set<string>();
 
-	const resolve = (name: string): Task => {
+	const resolve = (name: TaskName): Task => {
 		if (tasks[name]) {
 			return tasks[name];
 		}
@@ -51,7 +51,7 @@ const createSubmodule = (
 	};
 
 	for (const name of Object.keys(definitions)) {
-		resolve(name);
+		resolve(name as TaskName);
 	}
 
 	return tasks;

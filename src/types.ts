@@ -19,6 +19,9 @@ export interface TaskPOptions {
 	hiddenFromTaskList?: boolean | undefined;
 }
 
-export interface SubmoduleTaskOptions extends Omit<TaskPOptions, 'name'> {
-	moduleDependencies?: string[] | undefined;
+export interface SubmoduleTaskOptions<TaskName extends string> extends Omit<
+	TaskPOptions,
+	'name'
+> {
+	moduleDependencies?: TaskName[] | undefined;
 }
