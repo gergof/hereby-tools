@@ -1,11 +1,13 @@
 import { Task } from 'hereby';
 
 import { Exec } from './exec.js';
+import { Log } from './log.js';
 import { RmRf } from './rmRf.js';
 
 export interface RunPTools {
 	rmRf: RmRf;
 	exec: Exec;
+	log: Log;
 }
 
 export interface TaskPOptions {

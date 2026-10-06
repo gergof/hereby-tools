@@ -1,6 +1,7 @@
 import { Task, task, TaskOptions } from 'hereby';
 
 import exec from './exec.js';
+import log from './log.js';
 import rmRf from './rmRf.js';
 import { TaskPOptions } from './types.js';
 
@@ -11,7 +12,8 @@ const taskP = (options: TaskPOptions): Task => {
 		run = () =>
 			options.run!({
 				rmRf: rmRf(options.name),
-				exec: exec(options.name)
+				exec: exec(options.name),
+				log: log(options.name)
 			});
 	}
 
