@@ -10,8 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "release": "commit-and-tag-version",
-    "release:pre": "commit-and-tag-version --prerelease"
+    "release": "commit-and-tag-version"
   },
   "files": [
     "lib/**/*"
