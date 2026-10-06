@@ -1,6 +1,6 @@
 {
   "name": "hereby-tools",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "description": "Small collection of highly opinionated tools to work with Hereby task runner",
   "main": "lib/index.js",
