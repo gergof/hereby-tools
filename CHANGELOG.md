@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/gergof/hereby-tools/compare/v1.1.1...v1.2.0) (2026-10-06)
+
+### Features
+
+* Added log utility method ([71002e7](https://github.com/gergof/hereby-tools/commit/71002e71db62c9f4c8fcd381b180fb347fd6a139))
+
 ## [1.1.1](https://github.com/gergof/hereby-tools/compare/v1.1.0...v1.1.1) (2026-10-06)
 
 ### Bug Fixes
